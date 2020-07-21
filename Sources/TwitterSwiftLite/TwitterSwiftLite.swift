@@ -24,7 +24,7 @@ struct TwitterSignatureParameters {
   }
 }
 
-struct TwitterSwiftLiteKeys {
+public struct TwitterSwiftLiteKeys {
   let consumerKey: String
   let consumerSecret: String
   let oauthToken: String
