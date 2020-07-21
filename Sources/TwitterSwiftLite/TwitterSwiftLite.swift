@@ -1,7 +1,7 @@
 import Foundation
 import FoundationNetworking
 
-struct TwitterSignatureParameters {
+public struct TwitterSignatureParameters {
   let includeEntities: Bool
   let oauthConsumerKey: String
   let oauthSignatureMethod: String
