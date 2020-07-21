@@ -42,10 +42,10 @@ public struct TwitterSwiftLiteKeys {
   }
 }
 
-struct TwitterSwiftLite {
-  let keys: TwitterSwiftLiteKeys
+public struct TwitterSwiftLite {
+  private let keys: TwitterSwiftLiteKeys
 
-  init(keys: TwitterSwiftLiteKeys? = nil) {
+  public init(keys: TwitterSwiftLiteKeys? = nil) {
     guard let keys = keys else {
       fatalError("Need keys to use API")
     }
@@ -53,7 +53,7 @@ struct TwitterSwiftLite {
     self.keys = keys
   }
 
-  func postTweet(_ message: String) {
+  public func postTweet(_ message: String) {
     let model = TwitterSignatureParameters(
       includeEntities: true,
       oauthConsumerKey:  self.keys.consumerKey,
@@ -69,7 +69,7 @@ struct TwitterSwiftLite {
     Requests.post(urlRequest: request)
   }
 
-  func makeURLRequest(with message: String, and model: TwitterSignatureParameters) -> URLRequest {
+  public func makeURLRequest(with message: String, and model: TwitterSignatureParameters) -> URLRequest {
     guard let url = URL(string: model.urlString) else {
       fatalError("Unable to construct URL")
     }
