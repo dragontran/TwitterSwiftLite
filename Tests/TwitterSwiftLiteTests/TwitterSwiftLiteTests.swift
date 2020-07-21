@@ -14,6 +14,7 @@ final class TwitterSwiftLiteTests: XCTestCase {
             urlString: "https://api.twitter.com/1.1/statuses/update.json"
         )
 
+        // sample keys not real lol
         let keys = TwitterSwiftLiteKeys(
             consumerKey: "xvz1evFS4wEEPTGEFPHBog",
             consumerSecret: "kAcSOqF21Fu85e7zjz7ZN2U4ZRhfV3WpwPAoE3Z7kBw",
