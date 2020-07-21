@@ -29,7 +29,14 @@ public struct TwitterSwiftLiteKeys {
   let consumerSecret: String
   let oauthToken: String
   let oauthTokenSecret: String
-
+  
+  public init(consumerKey: String, consumerSecret: String, oauthToken: String, oauthTokenSecret: String) {
+    self.consumerKeys = consumerKeys
+    self.consumerSecret = consumerSecret
+    self.oauthToken = oauthToken
+    self.oauthTokenSecret = oauthTokenSecret
+  }
+  
   var signingKey: String {
     return "\(consumerSecret.percentEscaped)&\(oauthTokenSecret.percentEscaped)"
   }
