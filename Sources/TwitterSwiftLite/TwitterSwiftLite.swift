@@ -31,7 +31,7 @@ public struct TwitterSwiftLiteKeys {
   let oauthTokenSecret: String
   
   public init(consumerKey: String, consumerSecret: String, oauthToken: String, oauthTokenSecret: String) {
-    self.consumerKeys = consumerKeys
+    self.consumerKey = consumerKey
     self.consumerSecret = consumerSecret
     self.oauthToken = oauthToken
     self.oauthTokenSecret = oauthTokenSecret
